@@ -227,7 +227,7 @@ sub fixup_path {
     else {
         $r->server->log_error(
             "Your request path is '$path_info' and it doesn't matech your Location(Match) '$location'. " .
-            "This should be due to the configuration error. See perldoc ModPerl::PSGI for details."
+            "This should be due to the configuration error. See perldoc Apache::PSGI for details."
         );
     }
 
@@ -354,7 +354,7 @@ Apache::PSGI - Lightweight PSGI adaptor for mod_perl1
  # e.g. in Location or VirtualHost directive
  <Location /path/to/foo>
    SetHandler perl-script
-   PerlHandler ModPerl::PSGI
+   PerlHandler Apache::PSGI
    PerlSetVar psgi_app /real/path/to/foo/app.psgi
  </Location>
 
